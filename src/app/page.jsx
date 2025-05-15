@@ -8,13 +8,14 @@ import Confetti from "@/components/confetti"
 import FloatingHearts from "@/components/floating-hearts"
 import Loader from "@/components/Loader"
 import { MoveRight, PartyPopper } from "lucide-react"
+import RealSurprise from "@/components/real-surprise"
 
 export default function Home() {
   const [isBirthday, setIsBirthday] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [bubbles, setBubbles] = useState([])
   const [showForYouBtn, setShowForYouBtn] = useState(false)
-  const birthdayDate = new Date("April 28, 2025") // Change this date accordingly
+  const birthdayDate = new Date("May 1, 2025") // Change this date accordingly
   const audioRef = useRef(null)
 
   // For testing
@@ -65,7 +66,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 w-full max-w-3xl mx-auto"
+        className="relative z-10 w-full max-w-5xl mx-auto"
       >
         <motion.div className="bg-white bg-opacity-80 backdrop-blur-sm rounded-3xl shadow-xl shadow-rose-100 p-8 border-2 border-rose-200"
           initial={{ scale: 0.9 }}
